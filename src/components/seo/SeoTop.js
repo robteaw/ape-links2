@@ -31,9 +31,6 @@ const Container = styled.div`
   h1 {
     color: #fff;
   }
-
-
-  }
 `;
 
 const Wrapper = styled.div`

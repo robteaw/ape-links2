@@ -39,7 +39,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 10rem;
 
   img {
     height: 22rem;
