@@ -22,7 +22,7 @@ export default function Person() {
           <p>Business Development Strategist</p>
         </Skill>
       </Card>
-
+      <hr />
       <Card>
         <Name>
           <img src={olguin} alt={olguin} />

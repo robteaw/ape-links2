@@ -2,30 +2,23 @@ import React from "react";
 // styling and animation
 import styled from "styled-components";
 // images
-import success from "../../images/success.png";
+import adwords from "../../images/adwords.png";
 
-export default function SeoBottom() {
+export default function RankingBottom() {
   return (
     <Container>
       <Wrapper>
         <InnerWrapper>
           <Left>
-            <h3>Lead The Market</h3>
+            <h3>Get Professional Metrics</h3>
             <p>
-              With the plethora of expertise we have with Houston SEO, web
-              design, social media marketing, and reputation management, we are
-              the dominant search optimization agency in Texas. We flood the
-              first page of Google for clients on a local, and global level.
+              Handed out during meeting, with the latest insight on your
+              websites analytics.
             </p>
-            <p>
-              The sad part is, most Houston SEO companies have no clue how to
-              preform up-to-date search engine marketing, and will only stagnate
-              or hinder your website, and reputation, in the search engines by
-              doing very poor quality SEO tactics. We stand firm by what we do,
-              and our results speak for themselves.
-            </p>
+            <h3>Cohesive and Responsive</h3>
+            <p>Road maps made tailored to your specific websites goals.</p>
           </Left>
-          <img src={success} alt={success} />
+          <img src={adwords} alt={adwords} />
         </InnerWrapper>
       </Wrapper>
     </Container>
@@ -42,7 +35,7 @@ const Container = styled.div`
   margin-bottom: 10rem;
 
   img {
-    height: 22rem;
+    height: 18.75rem;
   }
 
   @media (max-width: 1200px) {
@@ -66,17 +59,21 @@ const InnerWrapper = styled.div`
   column-gap: 10rem;
 
   @media (max-width: 851px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 2rem;
+
+    h3 {
+      margin-top: 3rem;
+    }
+
+    img {
+      margin-top: 2rem;
+    }
   }
 
   @media (max-width: 768px) {
     img {
-      height: 18rem;
-    }
-
-    h3 {
-      margin-top: 3rem;
+      height: 15rem;
     }
 
     p {
@@ -89,7 +86,7 @@ const InnerWrapper = styled.div`
 const Left = styled.div`
   h3 {
     text-align: left;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
   }
 
   p {
