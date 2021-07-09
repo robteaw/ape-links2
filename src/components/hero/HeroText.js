@@ -47,27 +47,17 @@ const Container = styled.div`
 
 const BtnContainer = styled.div`
   margin-top: 2rem;
-  button {
-    color: var(--linkColor);
-    background-color: var(--btnColor);
-    font-size: 0.9rem;
-    border: none;
-    border-radius: 1rem;
-    margin: 0.5rem;
-    padding: 0.9rem 1.1rem;
-    box-shadow: 0px 13px 24px -7px rgba(255, 255, 255, 0.5);
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-
-    &:hover {
-      box-shadow: 0px 17px 16px -11px #ffd700;
-      transform: translateY(-5px);
-    }
-  }
 
   .learnmore {
     color: var(--linkColor);
     background: transparent;
     border: 3px solid var(--linkColor);
+
+    &:hover {
+      color: black;
+      background: var(--btnColor2);
+      box-shadow: 0px 17px 16px -11px #ffd700;
+      transform: translateY(-5px);
+    }
   }
 `;

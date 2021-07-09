@@ -2,17 +2,16 @@ import React from "react";
 // styling and animation
 import styled from "styled-components";
 
-export default function SeoSection() {
+export default function PpcTop() {
   return (
     <Container>
       <Wrapper>
         <InnerWrapper>
-          <h1>
-            Texas SEO Services <br /> <span>& Monthly Campaigns</span>
-          </h1>
-          <BtnContainer>
-            <button>Free Quote</button>
-          </BtnContainer>
+          <h2>
+            Best in Class Search Management <br />& A Google Certified Agency
+          </h2>
+          <p>For new campaign setups, email or call now to discuss further.</p>
+          <button>Free PPC Review</button>
         </InnerWrapper>
       </Wrapper>
     </Container>
@@ -21,21 +20,25 @@ export default function SeoSection() {
 
 // styling
 const Container = styled.div`
-  background: var(--heroBg);
-  height: 80vh;
+  height: auto;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 15rem 0 0 0;
 
-  h1 {
-    color: #fff;
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    margin: 3rem 0;
   }
 `;
 
 const Wrapper = styled.div`
   height: 100%;
-  width: 100vw;
 `;
 
 const InnerWrapper = styled.div`
@@ -48,21 +51,18 @@ const InnerWrapper = styled.div`
   align-items: center;
   text-align: center;
 
-  span {
-    margin-left: 10rem;
-  }
+  @media (max-width: 851px) {
+    flex-direction: column;
+    padding: 2rem;
 
-  @media (max-width: 768px) {
-    h1 {
+    h2 {
       font-size: 2rem;
+      margin-top: 3rem;
     }
 
-    span {
-      margin-left: 0.5rem;
+    p {
+      margin-bottom: 3rem;
+      margin: 1rem 0;
     }
   }
-`;
-
-const BtnContainer = styled.div`
-  margin-top: 2rem;
 `;

@@ -10,7 +10,7 @@
   --navColor: #003300;
   --navHover: #00e676;
   --btnColor: #228b22;
-  --btnColor2: #00bfff;
+  --btnColor2: #ffd700;
   --headColor2: #ffd700;
   --headColor3: #c0c0c0;
   --heroBg: #003300;
@@ -49,4 +49,43 @@ hr {
   height: 1px;
   background-color: #ccc;
   border: none;
+}
+
+button {
+  color: var(--linkColor);
+  background-color: var(--btnColor);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.25rem;
+  margin: 0.5rem;
+  padding: 0.9rem 1.1rem;
+  box-shadow: 0px 13px 24px -7px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+button:hover {
+  color: black;
+  background: var(--btnColor2);
+  box-shadow: 0px 17px 16px -11px #ffd700;
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
 }
