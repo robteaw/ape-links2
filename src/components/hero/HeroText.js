@@ -2,7 +2,7 @@ import React from "react";
 // styling and animations
 import styled from "styled-components";
 
-function HeroText() {
+export default function HeroText() {
   return (
     <Container>
       <h1>Most Ferious </h1>
@@ -19,8 +19,7 @@ function HeroText() {
   );
 }
 
-export default HeroText;
-
+// styling
 const Container = styled.div`
   padding: 1rem;
   h1 {

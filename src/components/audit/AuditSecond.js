@@ -96,9 +96,10 @@ const InnerWrapper = styled.div`
 `;
 
 const Box = styled.div`
+  color: #fff;
+  background: var(--navColor);
   width: fit-content;
   border: 3px solid #ccc;
-  /* border-radius: 2.5%; */
   padding: 0.5rem;
   margin-top: 3rem;
 
