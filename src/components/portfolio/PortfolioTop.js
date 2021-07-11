@@ -1,40 +1,57 @@
-import React, { useEffect, useState } from "react";
-// styling and animation
+import React, { useState } from "react";
 import styled from "styled-components";
-// images
+import Slider from "react-slick";
+// images - set 1
 import p1a from "../../images/portfolio/p1a.png";
 import p1b from "../../images/portfolio/p1b.png";
 import p1c from "../../images/portfolio/p1c.png";
 import p1d from "../../images/portfolio/p1d.png";
 import p1e from "../../images/portfolio/p1e.png";
 
-export default function PortfolioSection() {
+const images = [p1a, p1b, p1c, p1d, p1e];
+
+export default function TestSection() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    lazyLoad: true,
+    speed: 500,
+    centerMode: true,
+    centerPadding: 0,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+  };
   return (
     <Container>
       <Wrapper>
         <InnerWrapper>
           <h2>Copywriting and Photoshop design for online advertisements.</h2>
-          <img src={p1a} alt={p1a} />
-          <img src={p1b} alt={p1b} />
-          <img src={p1c} alt={p1c} />
-          <img src={p1d} alt={p1d} />
-          <img src={p1e} alt={p1e} />
+
+          <Slider {...settings}>
+            {images.map((img, idx) => (
+              <div>
+                <img src={img} alt={img} />
+              </div>
+            ))}
+          </Slider>
         </InnerWrapper>
       </Wrapper>
     </Container>
   );
 }
 
-// Styling
+// styling
 const Container = styled.div`
-  height: 80vh;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10rem;
 
-  h1 {
-    color: #fff;
+  h2 {
+    margin: 8rem 0 2rem 0;
   }
 `;
 
@@ -44,12 +61,17 @@ const Wrapper = styled.div`
 `;
 
 const InnerWrapper = styled.div`
-  max-width: 1000px;
+  max-width: 1200px;
   height: 100%;
   margin: auto;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  img {
+    width: 100%;
+    border: 0.5rem solid #fff;
+    transition: 0.5s all ease-in-out;
+    cursor: pointer;
+  }
 `;

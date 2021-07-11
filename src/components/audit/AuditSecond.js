@@ -22,33 +22,37 @@ export default function AuditSecond() {
             down a rabbit hole of wrong information.
           </p>
           <Box>
-            <p>
-              <b>
-                These are questions you need answers to, and a proper website
-                analysis will provide good answers:
-              </b>
-            </p>
-            <span>
+            <InnerBox>
               <p>
-                1. How well does my website perform against your competitors? Is
-                there more room for adjustments?
+                <b>
+                  These are questions you need answers to, and a proper website
+                  analysis will provide good answers:
+                </b>
               </p>
-              <p>
-                2. What's my keyword strategy? Are there keywords you should be
-                ranking for?
-              </p>
-              <p>3. Does my website structure and setup engender success?</p>
-              <p>
-                4. Is my website optimized correctly for traffic from organic
-                search?
-              </p>
-              <p>5. Do I have a content strategy? What is it? Does it work?</p>
-              <p>6. What's my social media strategy? Does it work?</p>
-              <p>
-                7. Is my reporting and tracking setup properly and capturing the
-                best data I can use?
-              </p>
-            </span>
+              <span>
+                <p>
+                  1. How well does my website perform against your competitors?
+                  Is there more room for adjustments?
+                </p>
+                <p>
+                  2. What's my keyword strategy? Are there keywords you should
+                  be ranking for?
+                </p>
+                <p>3. Does my website structure and setup engender success?</p>
+                <p>
+                  4. Is my website optimized correctly for traffic from organic
+                  search?
+                </p>
+                <p>
+                  5. Do I have a content strategy? What is it? Does it work?
+                </p>
+                <p>6. What's my social media strategy? Does it work?</p>
+                <p>
+                  7. Is my reporting and tracking setup properly and capturing
+                  the best data I can use?
+                </p>
+              </span>
+            </InnerBox>
           </Box>
         </InnerWrapper>
       </Wrapper>
@@ -94,10 +98,16 @@ const InnerWrapper = styled.div`
 const Box = styled.div`
   width: fit-content;
   border: 3px solid #ccc;
-  border-radius: 2.5%;
-  padding: 2rem;
+  /* border-radius: 2.5%; */
+  padding: 0.5rem;
+  margin-top: 3rem;
 
   span p {
     margin-left: 2rem;
   }
+`;
+
+const InnerBox = styled.div`
+  border: 3px solid #ccc;
+  padding: 1rem;
 `;
