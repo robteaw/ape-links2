@@ -13,15 +13,30 @@ const images = [p3a, p3b, p3c, p3d, p3e, p3f];
 
 export default function PortfolioSecond() {
   const settings = {
-    dots: true,
     infinite: true,
     lazyLoad: true,
     speed: 500,
-    centerMode: true,
-    centerPadding: 0,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
+    centerMode: true,
+    centerPadding: 0,
+
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          infinite: true,
+          lazyLoad: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: 0,
+          arrow: true,
+        },
+      },
+    ],
   };
   return (
     <Container>

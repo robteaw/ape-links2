@@ -15,15 +15,30 @@ const images = [p2a, p2b, p2c, p2d, p2e, p2f, p2g, p2h];
 
 export default function PortfolioSecond() {
   const settings = {
-    dots: true,
     infinite: true,
     lazyLoad: true,
     speed: 500,
-    centerMode: true,
-    centerPadding: 0,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
+    centerMode: true,
+    centerPadding: 0,
+
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          infinite: true,
+          lazyLoad: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: 0,
+          arrow: true,
+        },
+      },
+    ],
   };
   return (
     <Container>
