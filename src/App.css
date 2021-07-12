@@ -48,6 +48,11 @@ h4 {
   font-family: "Raleway";
 }
 
+h5 {
+  font-size: 1.35rem;
+  font-family: "Raleway";
+}
+
 hr {
   height: 1px;
   background-color: #ccc;

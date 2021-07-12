@@ -10,8 +10,11 @@ import Audit from "./pages/Audit";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import AboutSeo from "./pages/AboutSeo";
+import Footer from "./components/Footer";
+import Reserve from "./components/Reserve";
 
-function App({ Component }) {
+function App() {
   return (
     <>
       <Router>
@@ -25,7 +28,10 @@ function App({ Component }) {
           <Route path="/about" component={About} />
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/contact" component={Contact} />
+          <Route path="/about-seo" component={AboutSeo} />
         </Switch>
+        <Footer />
+        <Reserve />
       </Router>
     </>
   );

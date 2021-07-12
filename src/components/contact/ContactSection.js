@@ -12,7 +12,7 @@ export default function ContactSection() {
           <h1>Contact</h1>
           <p>
             For more information, please send an email, call or fill out the
-            form on the right.
+            form.
           </p>
           <Bottom>
             <Left>
