@@ -9,56 +9,55 @@ export default function Footer() {
   return (
     <Container>
       <Wrapper>
-        <InnerWrapper>
-          <Resource>
-            <p>
-              <h5>Hours</h5>
-            </p>
-            <span>
-              <p>7am - 10pm</p>
-            </span>
-            <p>
-              <h5>Resource</h5>
-            </p>
-            <p>About SEO</p>
-            <p>Careers</p>
-          </Resource>
-          <Info>
-            <p>
-              <h5>Contact</h5>
-            </p>
-            <p>
-              <MdLocationOn /> 12355 Antoine Dr. Houston, TX 77067
-            </p>
-            <p>
-              <BiPhoneCall /> 832-791-3428
-            </p>
-            <p>
-              <HiOutlineMail /> seoapelinks@gmail.com
-            </p>
-            <span>
-              <a href="https://www.facebook.com/DirectShadings/">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/jonathan-yeras-40882b191/">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-              <a href="https://twitter.com/lilbillskills">
-                <i className="fab fa-twitter"></i>
-              </a>
-            </span>
-          </Info>
-          <Newsletter>
-            <p>
-              <h5>Newsletter</h5>
-            </p>
-            <p>Join our newsletter to learn more.</p>
-            <form action="" method="post">
-              <input type="email" name="email" />
-              <input className="submit" type="submit" value="Subscribe" />
-            </form>
-          </Newsletter>
-        </InnerWrapper>
+        <Resource>
+          <p>
+            <h5>Hours</h5>
+          </p>
+          <span>
+            <p>7am - 10pm</p>
+          </span>
+          <p>
+            <h5>Resource</h5>
+          </p>
+          <p>About SEO</p>
+          <p>Careers</p>
+        </Resource>
+        <Info>
+          <p>
+            <h5>Contact</h5>
+          </p>
+          <p>
+            <MdLocationOn /> 12355 Antoine Dr. Houston, TX 77067
+          </p>
+          <p>
+            <BiPhoneCall /> <a href="tel:832-791-3428"> 832-791-3428</a>
+          </p>
+          <p>
+            <HiOutlineMail />
+            <a href="mailto:seoapelinks@gmail.com"> seoapelinks@gmail.com</a>
+          </p>
+          <span>
+            <a href="https://www.facebook.com/DirectShadings/">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jonathan-yeras-40882b191/">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/lilbillskills">
+              <i className="fab fa-twitter"></i>
+            </a>
+          </span>
+        </Info>
+        <Newsletter>
+          <p>
+            <h5>Newsletter</h5>
+          </p>
+          <p>Join our newsletter to learn more.</p>
+          <form action="" method="post">
+            <input type="email" name="email" />
+            <input className="submit" type="submit" value="Subscribe" />
+          </form>
+        </Newsletter>
       </Wrapper>
     </Container>
   );
@@ -83,14 +82,15 @@ const Container = styled.div`
     line-height: 2rem;
     text-align: left;
   }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10;
+  }
 `;
 
 const Wrapper = styled.div`
-  height: 100%;
-  width: 100vw;
-`;
-
-const InnerWrapper = styled.div`
   max-width: 1000px;
   height: 100%;
   margin: auto;

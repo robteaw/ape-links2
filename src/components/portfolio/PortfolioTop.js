@@ -2,6 +2,7 @@ import React from "react";
 // styling and animation
 import styled from "styled-components";
 import Slider from "react-slick";
+import { settings } from "../Container";
 // images - set 1
 import p1a from "../../images/portfolio/p1a.png";
 import p1b from "../../images/portfolio/p1b.png";
@@ -12,32 +13,8 @@ import p1e from "../../images/portfolio/p1e.png";
 const images = [p1a, p1b, p1c, p1d, p1e];
 
 export default function PortfolioTop() {
-  const settings = {
-    infinite: true,
-    lazyLoad: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: 0,
-    arrow: true,
+  <settings />;
 
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          infinite: true,
-          lazyLoad: true,
-          speed: 500,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: 0,
-          arrow: true,
-        },
-      },
-    ],
-  };
   return (
     <Container>
       <Wrapper>

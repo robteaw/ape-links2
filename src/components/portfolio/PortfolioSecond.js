@@ -1,6 +1,8 @@
 import React from "react";
+// styling and animation
 import styled from "styled-components";
 import Slider from "react-slick";
+import { settings } from "../Container";
 // images - set 2
 import p2a from "../../images/portfolio/p2a.jpg";
 import p2b from "../../images/portfolio/p2b.jpg";
@@ -14,32 +16,8 @@ import p2h from "../../images/portfolio/p2h.jpg";
 const images = [p2a, p2b, p2c, p2d, p2e, p2f, p2g, p2h];
 
 export default function PortfolioSecond() {
-  const settings = {
-    infinite: true,
-    lazyLoad: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-    centerMode: true,
-    centerPadding: 0,
+  <settings />;
 
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          infinite: true,
-          lazyLoad: true,
-          speed: 500,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: 0,
-          arrow: true,
-        },
-      },
-    ],
-  };
   return (
     <Container>
       <Wrapper>

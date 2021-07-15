@@ -1,6 +1,7 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import { Container, Wrapper } from "../Container";
 
 export default function AuditSecond() {
   return (
@@ -61,21 +62,6 @@ export default function AuditSecond() {
 }
 
 // styling
-const Container = styled.div`
-  height: auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 15rem 0 0 0;
-`;
-
-const Wrapper = styled.div`
-  justify-content: center;
-  align-items: center;
-`;
-
 const InnerWrapper = styled.div`
   max-width: 1000px;
   height: 100%;
@@ -85,13 +71,8 @@ const InnerWrapper = styled.div`
   justify-content: center;
 
   p {
-    line-height: 2rem;
     text-align: left;
     margin-bottom: 1rem;
-  }
-
-  @media (max-width: 1100px) {
-    padding: 2rem;
   }
 `;
 

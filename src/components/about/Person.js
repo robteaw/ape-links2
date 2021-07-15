@@ -11,7 +11,7 @@ export default function Person() {
       <Card>
         <Name>
           <img src={yeras} alt={yeras} />
-          <h4>Jonathan Yeras</h4>
+          <h5>Jonathan Yeras</h5>
         </Name>
         <Skill>
           <p>SEM/SEO Experience</p>
@@ -26,7 +26,7 @@ export default function Person() {
       <Card>
         <Name>
           <img src={olguin} alt={olguin} />
-          <h4>Andrew Olguin</h4>
+          <h5>Andrew Olguin</h5>
         </Name>
         <Skill>
           <p>SEM/SEO Experience</p>
@@ -46,16 +46,15 @@ const Container = styled.div``;
 
 const Card = styled.div`
   display: flex;
-  margin: 5rem;
+  margin: 4rem 0;
   column-gap: 15rem;
 
-  h4 {
+  h5 {
     color: var(--teamColor);
     margin: 2rem 0;
   }
 
   p {
-    line-height: 2rem;
     text-align: left;
   }
 
@@ -65,10 +64,6 @@ const Card = styled.div`
 
   @media (max-width: 923px) {
     flex-direction: column;
-
-    h4 {
-      font-size: 1.3rem;
-    }
   }
 `;
 

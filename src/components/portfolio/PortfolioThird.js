@@ -1,6 +1,8 @@
 import React from "react";
+// styling and animation
 import styled from "styled-components";
 import Slider from "react-slick";
+import { settings } from "../Container";
 // images - set 3
 import p3a from "../../images/portfolio/p3a.png";
 import p3b from "../../images/portfolio/p3b.png";
@@ -12,32 +14,8 @@ import p3f from "../../images/portfolio/p3f.png";
 const images = [p3a, p3b, p3c, p3d, p3e, p3f];
 
 export default function PortfolioSecond() {
-  const settings = {
-    infinite: true,
-    lazyLoad: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-    centerMode: true,
-    centerPadding: 0,
+  <settings />;
 
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          infinite: true,
-          lazyLoad: true,
-          speed: 500,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: 0,
-          arrow: true,
-        },
-      },
-    ],
-  };
   return (
     <Container>
       <Wrapper>

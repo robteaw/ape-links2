@@ -1,6 +1,7 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import { Container, Wrapper } from "../Container";
 // images
 import success from "../../images/success.png";
 
@@ -33,37 +34,15 @@ export default function SeoBottom() {
 }
 
 // styling
-const Container = styled.div`
-  height: auto;
-  width: 100%;
+const InnerWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10rem;
+  column-gap: 10rem;
 
   img {
     height: 22rem;
   }
-
-  @media (max-width: 1200px) {
-    padding: 2rem;
-  }
-`;
-
-const Wrapper = styled.div`
-  height: 100%;
-  width: 100vw;
-`;
-
-const InnerWrapper = styled.div`
-  max-width: 1000px;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  column-gap: 10rem;
 
   @media (max-width: 851px) {
     flex-direction: column-reverse;
@@ -94,7 +73,6 @@ const Left = styled.div`
 
   p {
     text-align: left;
-    line-height: 2rem;
     margin: 1rem 0;
   }
 `;

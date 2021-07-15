@@ -1,6 +1,7 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import { Container, Wrapper } from "../Container";
 // images
 import analytics from "../../images/g-analytics.png";
 import console from "../../images/console.png";
@@ -9,7 +10,7 @@ export default function RankingThird() {
   return (
     <Container>
       <Wrapper>
-        <h3>LEARN HOW TO INTEGRATE THESE TOOLS FOR YOUR BUSINESS</h3>
+        <h3>Learn How To Integrate These Tools For Your Business</h3>
 
         <InnerWrapper>
           <img src={analytics} alt={analytics} />
@@ -21,13 +22,13 @@ export default function RankingThird() {
 }
 
 // styling
-const Container = styled.div`
-  height: auto;
-  width: 100%;
+const InnerWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10rem;
+  text-align: center;
+  column-gap: 10rem;
+  margin-top: 3rem;
 
   h3 {
     text-align: center;
@@ -39,29 +40,8 @@ const Container = styled.div`
     width: 28.125rem;
   }
 
-  @media (max-width: 1200px) {
-    padding: 2rem;
-  }
-`;
-
-const Wrapper = styled.div`
-  height: 100%;
-  width: 100vw;
-`;
-
-const InnerWrapper = styled.div`
-  max-width: 1000px;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  column-gap: 10rem;
-
   @media (max-width: 1100px) {
     flex-direction: column-reverse;
-    padding: 2rem;
 
     h3 {
       margin-top: 3rem;

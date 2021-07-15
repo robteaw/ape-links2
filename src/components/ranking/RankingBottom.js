@@ -1,6 +1,7 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import { Container, Wrapper } from "../Container";
 // images
 import adwords from "../../images/adwords.png";
 
@@ -26,41 +27,25 @@ export default function RankingBottom() {
 }
 
 // styling
-const Container = styled.div`
-  height: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10rem;
-
-  img {
-    height: 18.75rem;
-  }
-
-  @media (max-width: 1200px) {
-    padding: 2rem;
-  }
-`;
-
-const Wrapper = styled.div`
-  height: 100%;
-  width: 100vw;
-`;
-
 const InnerWrapper = styled.div`
-  max-width: 1000px;
-  height: 100%;
-  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   column-gap: 10rem;
 
+  img {
+    height: 18.75rem;
+    width: 28.125rem;
+  }
+
+  p {
+    margin-bottom: 3rem;
+    margin: 1rem 0;
+  }
+
   @media (max-width: 851px) {
     flex-direction: column;
-    padding: 2rem;
 
     h3 {
       margin-top: 3rem;
@@ -74,11 +59,7 @@ const InnerWrapper = styled.div`
   @media (max-width: 768px) {
     img {
       height: 15rem;
-    }
-
-    p {
-      margin-bottom: 3rem;
-      margin: 1rem 0;
+      width: 20rem;
     }
   }
 `;
@@ -91,7 +72,6 @@ const Left = styled.div`
 
   p {
     text-align: left;
-    line-height: 2rem;
     margin: 1rem 0;
   }
 `;

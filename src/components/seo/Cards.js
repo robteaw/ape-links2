@@ -76,7 +76,6 @@ const Card = styled.div`
   }
 
   p {
-    line-height: 2rem;
     text-align: left;
   }
 

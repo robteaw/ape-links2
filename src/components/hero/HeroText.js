@@ -23,8 +23,6 @@ export default function HeroText() {
 const Container = styled.div`
   padding: 1rem;
   h1 {
-    font-size: 3.5rem;
-    font-family: "Raleway";
     font-weight: 700;
 
     &:nth-of-type(1) {
@@ -40,7 +38,6 @@ const Container = styled.div`
     color: var(--linkColor);
     font-size: 1rem;
     margin: 0.5rem;
-    line-height: 2rem;
   }
 `;
 
@@ -56,7 +53,6 @@ const BtnContainer = styled.div`
       color: black;
       background: var(--btnColor2);
       box-shadow: 0px 17px 16px -11px #ffd700;
-      /* transform: translateY(-5px); */
     }
   }
 `;

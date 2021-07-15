@@ -17,6 +17,7 @@
   --headColor2: #ffd700;
   --headColor3: #c0c0c0;
   --heroBg: #003300;
+  --secondBg: #50a4d8;
   --teamColor: #43a047;
 }
 
@@ -30,27 +31,34 @@ body {
 
 h1 {
   font-size: 3rem;
-  font-family: "Raleway";
 }
 
 h2 {
   font-size: 2.5rem;
-  font-family: "Raleway";
 }
 
 h3 {
   font-size: 2rem;
-  font-family: "Raleway";
 }
 
 h4 {
   font-size: 1.5rem;
-  font-family: "Raleway";
 }
 
 h5 {
   font-size: 1.35rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: "Raleway";
+}
+
+p {
+  line-height: 2rem;
 }
 
 hr {
@@ -112,5 +120,11 @@ button:hover {
 
   h4 {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  p {
+    font-size: 0.94rem;
   }
 }

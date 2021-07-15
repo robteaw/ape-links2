@@ -1,6 +1,8 @@
 import React from "react";
+// styling and animation
 import styled from "styled-components";
 import Slider from "react-slick";
+import { settings } from "../Container";
 // images - set 4
 import p4a from "../../images/portfolio/p4a.png";
 import p4b from "../../images/portfolio/p4b.png";
@@ -12,32 +14,8 @@ import p4f from "../../images/portfolio/p4f.png";
 const images = [p4a, p4b, p4c, p4d, p4e, p4f];
 
 export default function PortfolioBottom() {
-  const settings = {
-    infinite: true,
-    lazyLoad: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-    centerMode: true,
-    centerPadding: 0,
+  <settings />;
 
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          infinite: true,
-          lazyLoad: true,
-          speed: 500,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: 0,
-          arrow: true,
-        },
-      },
-    ],
-  };
   return (
     <Container>
       <Wrapper>

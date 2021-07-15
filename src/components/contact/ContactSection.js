@@ -1,6 +1,7 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import { Container, Wrapper } from "../Container";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiPhoneCall } from "react-icons/bi";
 
@@ -21,14 +22,15 @@ export default function ContactSection() {
                   <h4>Contact Information</h4>
                   <span>
                     <p>
-                      <HiOutlineMail />{" "}
+                      <HiOutlineMail />
                       <a href="mailto:seoapelinks@gmail.com">
+                        {" "}
                         seoapelinks@gmail.com
                       </a>
                     </p>
                     <p>
-                      <BiPhoneCall />{" "}
-                      <a href="tel:832-791-3428">832-791-3428</a>
+                      <BiPhoneCall />
+                      <a href="tel:832-791-3428"> 832-791-3428</a>
                     </p>
                   </span>
                 </InnerBox>
@@ -99,34 +101,12 @@ export default function ContactSection() {
 }
 
 // styling
-const Container = styled.div`
-  height: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15rem 0 10rem 0;
+const InnerWrapper = styled.div`
+  text-align: center;
 
   h1 {
     margin-bottom: 1.5rem;
   }
-`;
-
-const Wrapper = styled.div`
-  height: 100%;
-  width: 100vw;
-`;
-
-const InnerWrapper = styled.div`
-  max-width: 1000px;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  column-gap: 10rem;
 `;
 
 const Bottom = styled.div`

@@ -1,6 +1,7 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import { Container, Wrapper } from "../Container";
 // images
 import unlock from "../../images/unlock.png";
 
@@ -34,29 +35,6 @@ export default function AuditBottom() {
 }
 
 // styling
-const Container = styled.div`
-  height: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10rem 0;
-
-  img {
-    height: 22rem;
-  }
-
-  p {
-    line-height: 2rem;
-    margin: 1rem 0;
-  }
-`;
-
-const Wrapper = styled.div`
-  height: 100%;
-  width: 100vw;
-`;
-
 const InnerWrapper = styled.div`
   max-width: 1000px;
   height: 100%;
@@ -66,6 +44,14 @@ const InnerWrapper = styled.div`
   align-items: center;
   text-align: center;
   column-gap: 10rem;
+
+  img {
+    height: 22rem;
+  }
+
+  p {
+    margin: 1rem 0;
+  }
 
   @media (max-width: 1100px) {
     padding: 2rem;
@@ -86,6 +72,12 @@ const InnerWrapper = styled.div`
     p {
       margin-bottom: 3rem;
       margin: 1rem 0;
+    }
+  }
+
+  @media (max-width: 576px) {
+    img {
+      height: 15rem;
     }
   }
 `;

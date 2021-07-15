@@ -1,6 +1,7 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import { Container, Wrapper } from "../Container";
 // images
 import ranking from "../../images/ranking.png";
 
@@ -34,13 +35,12 @@ export default function RankingSecond() {
 }
 
 // styling
-const Container = styled.div`
-  height: auto;
-  width: 100%;
+const InnerWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10rem 0;
+  column-gap: 10rem;
+  margin-top: 3rem;
 
   h3 {
     text-align: center;
@@ -51,26 +51,6 @@ const Container = styled.div`
   img {
     height: 18.75rem;
   }
-
-  @media (max-width: 1200px) {
-    padding: 2rem;
-  }
-`;
-
-const Wrapper = styled.div`
-  height: 100%;
-  width: 100vw;
-`;
-
-const InnerWrapper = styled.div`
-  max-width: 1000px;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  column-gap: 10rem;
 
   @media (max-width: 768px) {
     flex-direction: column;

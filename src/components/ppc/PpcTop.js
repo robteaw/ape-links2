@@ -1,6 +1,7 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import { Container, Wrapper } from "../Container";
 
 export default function PpcTop() {
   return (
@@ -19,37 +20,16 @@ export default function PpcTop() {
 }
 
 // styling
-const Container = styled.div`
-  height: auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 15rem 0 0 0;
+const InnerWrapper = styled.div`
+  text-align: center;
 
   h2 {
     text-align: center;
   }
 
   p {
-    margin: 3rem 0;
+    margin: 2rem 0;
   }
-`;
-
-const Wrapper = styled.div`
-  height: 100%;
-`;
-
-const InnerWrapper = styled.div`
-  max-width: 1000px;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 
   @media (max-width: 851px) {
     flex-direction: column;
