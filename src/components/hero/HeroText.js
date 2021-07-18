@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // styling and animations
 import styled from "styled-components";
 
@@ -12,8 +13,12 @@ export default function HeroText() {
         animals are the best in class and are your competitor's dread.
       </p>
       <BtnContainer>
-        <button className="learnmore">Learn More</button>
-        <button>Request Demo</button>
+        <a href="/#more">
+          <button className="learnmore">Learn More</button>
+        </a>
+        <Link to="/contact">
+          <button>Request Demo</button>
+        </Link>
       </BtnContainer>
     </Container>
   );

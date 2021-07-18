@@ -2,15 +2,39 @@ import React, { useState } from "react";
 // styling and animations
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Dropdown from "./Dropdown";
 // images
 import logo from "../images/logo.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const [click, setClick] = useState(false);
+  const closeMobileMenu = () => setClick(false);
+  const [dropdown, setDropdown] = useState(false);
+
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+  };
+
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(false);
+    }
+  };
+
   return (
     <Nav>
       <Container>
-        <img src={logo} alt={logo} className="logo" />
+        <Link to="/">
+          <img src={logo} alt={logo} className="logo" />
+        </Link>
         <Hamburger onClick={() => setIsOpen(!isOpen)}>
           <span></span>
           <span></span>
@@ -18,12 +42,24 @@ function Navbar() {
         </Hamburger>
         <Menu isOpen={isOpen}>
           <LinkWrapper>
-            <MenuLink to="">Home</MenuLink>
-            <MenuLink to="/seo">Services</MenuLink>
-            <MenuLink to="">About</MenuLink>
-            <MenuLink to="">Portfolio</MenuLink>
-            <MenuLink to="">Contact</MenuLink>
-            {/* <Button>Contact</Button> */}
+            <Link to="/">Home</Link>
+            <li
+              className="nav-item"
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+            >
+              <Link
+                to="/services"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Services <i className="fas fa-caret-down" />
+              </Link>
+              {dropdown && <Dropdown />}
+            </li>
+            <Link to="/about">About</Link>
+            <Link to="portfolio">Portfolio</Link>
+            <Link to="/contact">Contact</Link>
           </LinkWrapper>
         </Menu>
       </Container>
@@ -39,11 +75,16 @@ const Nav = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  position: absolute; // navbar on hero
+  position: fixed; // navbar on hero
   top: 0;
   left: 0;
   right: 0;
+  list-style-type: none;
   z-index: 1;
+
+  a:hover {
+    color: var(--btnColor2);
+  }
 `;
 
 const Container = styled.div`
@@ -55,7 +96,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   max-width: 1000px;
   margin: auto;
-  padding: 2rem;
+  padding: 1rem;
 
   .logo {
     height: 2.8rem;
@@ -70,10 +111,6 @@ const Container = styled.div`
     padding: 0.7rem 1.5rem;
     transition: all 0.25s ease-in;
     border-radius: 0.5rem;
-  }
-
-  &:hover {
-    color: var(--navHover);
   }
 `;
 
@@ -112,41 +149,19 @@ const LinkWrapper = styled.a`
   }
 `;
 
-const MenuLink = styled.a`
-  color: #858586;
-  text-decoration: none;
-  font-size: 0.9rem;
-  padding: 0.7rem 1.5rem;
-  transition: all 0.2s ease-in;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  cursor: pointer;
-  &:hover {
-    color: var(--navHover);
-  }
-`;
-
-const Button = styled.button`
-  color: var(--navColor);
-  background-color: var(--btnColor);
-  font-size: 0.8rem;
-  border: none;
-  border-radius: 1rem;
-  margin-left: 0.5rem;
-  padding: 0.8rem 1.1rem;
-  box-shadow: 0px 13px 24px -7px rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-
-  &:hover {
-    box-shadow: 0px 17px 16px -11px #ffd700;
-    transform: translateY(-5px);
-  }
-
-  @media (max-width: 670px) {
-    /* padding: 0.3rem; */
-  }
-`;
+// const MenuLink = styled.a`
+//   color: #858586;
+//   text-decoration: none;
+//   font-size: 0.9rem;
+//   padding: 0.7rem 1.5rem;
+//   transition: all 0.2s ease-in;
+//   border-radius: 0.5rem;
+//   font-weight: 500;
+//   cursor: pointer;
+//   &:hover {
+//     color: var(--navHover);
+//   }
+// `;
 
 const Hamburger = styled.div`
   display: none; // hamburger appears

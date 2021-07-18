@@ -1,6 +1,5 @@
 import React from "react";
 // styling and animation
-import styled from "styled-components";
 import { Container, Wrapper } from "../Container";
 import Person from "./Person";
 

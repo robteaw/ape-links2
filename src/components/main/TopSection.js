@@ -9,7 +9,7 @@ import { FaLaptopCode } from "react-icons/fa";
 export default function TopSection() {
   return (
     <>
-      <Top>
+      <Top id="more">
         <h5>
           <RiEmotionHappyLine /> 100+ Happy Clients
         </h5>

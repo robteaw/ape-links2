@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // styling and animation
 import styled from "styled-components";
 import { MdLocationOn } from "react-icons/md";
@@ -19,8 +20,12 @@ export default function Footer() {
           <p>
             <h5>Resource</h5>
           </p>
-          <p>About SEO</p>
-          <p>Careers</p>
+          <Link to="/about-seo">
+            <p>About SEO</p>
+          </Link>
+          <Link to="/career">
+            <p>Careers</p>
+          </Link>
         </Resource>
         <Info>
           <p>

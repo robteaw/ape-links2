@@ -1,7 +1,6 @@
 import React from "react";
 // styling and animations
 import styled from "styled-components";
-import { settings } from "../Container";
 // images
 import googleads from "../../images/googleads.png";
 import googleanalytics from "../../images/googleanalytics.png";
@@ -15,34 +14,24 @@ export default function Logo() {
   return (
     <Icon>
       <div className="slider">
-        <div className="slider-track">
-          <div className="slide">
-            <img src={googleads} alt={googleads} />
-          </div>
+        <div className="slide">
+          <img src={googleads} alt={googleads} />
+          <img src={googleanalytics} alt={googleanalytics} />
+          <img src={ahrefs} alt={ahrefs} />
+          <img src={facebook} alt={facebook} />
+          <img src={majestic} alt={majestic} />
+          <img src={raven} alt={raven} />
+          <img src={semrush} alt={semrush} />
+        </div>
 
-          <div className="slide">
-            <img src={googleanalytics} alt={googleanalytics} />
-          </div>
-
-          <div className="slide">
-            <img src={ahrefs} alt={ahrefs} />
-          </div>
-
-          <div className="slide">
-            <img src={facebook} alt={facebook} />
-          </div>
-
-          <div className="slide">
-            <img src={majestic} alt={majestic} />
-          </div>
-
-          <div className="slide">
-            <img src={raven} alt={raven} />
-          </div>
-
-          <div className="slide">
-            <img src={semrush} alt={semrush} />
-          </div>
+        <div className="slide">
+          <img src={googleads} alt={googleads} />
+          <img src={googleanalytics} alt={googleanalytics} />
+          <img src={ahrefs} alt={ahrefs} />
+          <img src={facebook} alt={facebook} />
+          <img src={majestic} alt={majestic} />
+          <img src={raven} alt={raven} />
+          <img src={semrush} alt={semrush} />
         </div>
       </div>
     </Icon>
@@ -56,52 +45,50 @@ const Icon = styled.div`
   justify-content: center;
   align-items: center;
 
-  img {
-    height: 4rem;
-    margin: 2rem;
-    padding: 0 2.5rem;
-  }
-
   .slider {
-    overflow: hidden;
+    width: 100%;
+    height: 6.25rem;
     position: relative;
-    margin: auto;
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    overflow: hidden;
+  }
+  .slide {
+    height: 6.25rem;
+    display: flex;
+    align-items: center;
+    animation: slideshow 8s linear infinite;
+  }
+  .slide img {
+    height: 4.375rem;
+    margin: 2rem;
+    padding: 0 2rem;
   }
 
   .slider::before,
   .slider::after {
-    content: "";
+    height: 6.25rem;
+    width: 100%;
     position: absolute;
-    width: 200px;
-    height: 100px;
+    content: "";
     z-index: 2;
   }
-
   .slider::before {
-    top: 0;
     left: 0;
-  }
-
-  .slider::after {
     top: 0;
+  }
+  .slider::after {
     right: 0;
+    top: 0;
     transform: rotateZ(180deg);
   }
 
-  .slider .slider-track {
-    display: flex;
-    width: calc(250px * 14);
-    animation: scroll 10s infinite linear;
-  }
-
-  @keyframes scroll {
+  @keyframes slideshow {
     0% {
       transform: translateX(0%);
     }
 
     100% {
-      transform: translateX(calc(250px * 7));
+      transform: translateX(-100%);
     }
   }
 `;

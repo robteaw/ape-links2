@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // styling and animation
 import styled from "styled-components";
 import { Container, Wrapper } from "../Container";
@@ -12,7 +13,9 @@ export default function SeoSection() {
             Texas SEO Services <br /> <span>& Monthly Campaigns</span>
           </h1>
           <BtnContainer>
-            <button>Free Quote</button>
+            <Link to="/contact">
+              <button>Free Quote</button>
+            </Link>
           </BtnContainer>
         </InnerWrapper>
       </Wrapper>

@@ -33,14 +33,6 @@ export default function HeroSection() {
 }
 
 // styling
-const TiltWrapper = styled(Tilt)`
-  width: 60%;
-
-  @media (max-width: 670px) {
-    display: none;
-  }
-`;
-
 const Container = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
@@ -76,4 +68,10 @@ const Left = styled.div`
   }
 `;
 
-const Right = styled.div``;
+const TiltWrapper = styled(Tilt)`
+  width: 60%;
+
+  @media (max-width: 670px) {
+    display: none;
+  }
+`;

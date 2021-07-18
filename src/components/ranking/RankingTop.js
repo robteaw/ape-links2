@@ -1,6 +1,7 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import Tilt from "react-tilt";
 import { Container, Wrapper } from "../Container";
 // images
 import ranking from "../../images/ranking.png";
@@ -11,7 +12,9 @@ export default function RankingSecond() {
       <Wrapper>
         <h3>Google Ranks Websites Based On Search Queries</h3>
         <InnerWrapper>
-          <img src={ranking} alt={ranking} />
+          <TiltWrapper options={{ max: 25 }}>
+            <img src={ranking} alt={ranking} />
+          </TiltWrapper>
 
           <Right>
             <p>Google ranks based of a user grade sheet of 200 factors.</p>
@@ -68,5 +71,13 @@ const Right = styled.div`
     line-height: 2rem;
     margin-bottom: 2rem;
     flex-direction: row;
+  }
+`;
+
+const TiltWrapper = styled(Tilt)`
+  width: 60%;
+
+  @media (max-width: 670px) {
+    display: none;
   }
 `;

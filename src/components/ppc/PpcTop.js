@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // styling and animation
 import styled from "styled-components";
 import { Container, Wrapper } from "../Container";
@@ -12,7 +13,9 @@ export default function PpcTop() {
             Best in Class Search Management <br />& A Google Certified Agency
           </h2>
           <p>For new campaign setups, email or call now to discuss further.</p>
-          <button>Free PPC Review</button>
+          <Link to="/contact">
+            <button>Free PPC Review</button>
+          </Link>
         </InnerWrapper>
       </Wrapper>
     </Container>

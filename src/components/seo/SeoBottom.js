@@ -1,6 +1,7 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import Tilt from "react-tilt";
 import { Container, Wrapper } from "../Container";
 // images
 import success from "../../images/success.png";
@@ -26,7 +27,9 @@ export default function SeoBottom() {
               and our results speak for themselves.
             </p>
           </Left>
-          <img src={success} alt={success} />
+          <TiltWrapper options={{ max: 25 }}>
+            <img src={success} alt={success} />
+          </TiltWrapper>
         </InnerWrapper>
       </Wrapper>
     </Container>
@@ -74,5 +77,13 @@ const Left = styled.div`
   p {
     text-align: left;
     margin: 1rem 0;
+  }
+`;
+
+const TiltWrapper = styled(Tilt)`
+  width: 60%;
+
+  @media (max-width: 670px) {
+    display: none;
   }
 `;

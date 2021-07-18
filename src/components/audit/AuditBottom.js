@@ -1,6 +1,7 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import Tilt from "react-tilt";
 import { Container, Wrapper } from "../Container";
 // images
 import unlock from "../../images/unlock.png";
@@ -27,7 +28,9 @@ export default function AuditBottom() {
               a road map of the steps you should complete along the way.
             </p>
           </Left>
-          <img src={unlock} alt={unlock} />
+          <TiltWrapper options={{ max: 25 }}>
+            <img src={unlock} alt={unlock} />
+          </TiltWrapper>
         </InnerWrapper>
       </Wrapper>
     </Container>
@@ -90,5 +93,13 @@ const Left = styled.div`
 
   p {
     text-align: left;
+  }
+`;
+
+const TiltWrapper = styled(Tilt)`
+  width: 60%;
+
+  @media (max-width: 670px) {
+    display: none;
   }
 `;

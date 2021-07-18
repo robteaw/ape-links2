@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import AboutSeo from "./pages/AboutSeo";
+import Career from "./pages/Career";
 import Footer from "./components/Footer";
 import Reserve from "./components/Reserve";
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/contact" component={Contact} />
           <Route path="/about-seo" component={AboutSeo} />
+          <Route path="/career" component={Career} />
         </Switch>
         <Footer />
         <Reserve />

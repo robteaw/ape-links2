@@ -1,6 +1,7 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import Tilt from "react-tilt";
 import { Container, Wrapper } from "../Container";
 // images
 import analysis from "../../images/analysis.png";
@@ -10,7 +11,9 @@ export default function AuditThird() {
     <Container>
       <Wrapper>
         <InnerWrapper>
-          <img src={analysis} alt={analysis} />
+          <TiltWrapper options={{ max: 25 }}>
+            <img src={analysis} alt={analysis} />
+          </TiltWrapper>
           <Right>
             <p>
               An accurate analysis of your website is going to answer each of
@@ -96,5 +99,13 @@ const Right = styled.div`
 
   p {
     text-align: left;
+  }
+`;
+
+const TiltWrapper = styled(Tilt)`
+  width: 60%;
+
+  @media (max-width: 670px) {
+    display: none;
   }
 `;

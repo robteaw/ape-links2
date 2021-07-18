@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // styling and animation
 import styled from "styled-components";
 import { Container, Wrapper } from "../Container";
@@ -10,7 +11,9 @@ export default function AuditTop() {
         <InnerWrapper>
           <h1>72 Hour Website Audit</h1>
           <p>Manual Website Crawling. Click below to crawl your website.</p>
-          <button>Crawl</button>
+          <Link to="/contact">
+            <button>Crawl</button>
+          </Link>
         </InnerWrapper>
       </Wrapper>
     </Container>

@@ -1,6 +1,7 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import Tilt from "react-tilt";
 import { Container, Wrapper } from "../Container";
 // images
 import ppcImg from "../../images/ppc.png";
@@ -10,7 +11,9 @@ export default function PpcBottom() {
     <Container>
       <Wrapper>
         <InnerWrapper>
-          <img src={ppcImg} alt={ppcImg} />
+          <TiltWrapper options={{ max: 25 }}>
+            <img src={ppcImg} alt={ppcImg} />
+          </TiltWrapper>
           <Right>
             <h3>SEO & PPC</h3>
             <p>search engine optimization & pay per click</p>
@@ -76,5 +79,13 @@ const Right = styled.div`
 
   p {
     text-align: left;
+  }
+`;
+
+const TiltWrapper = styled(Tilt)`
+  width: 60%;
+
+  @media (max-width: 670px) {
+    display: none;
   }
 `;

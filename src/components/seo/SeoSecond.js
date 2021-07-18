@@ -1,6 +1,7 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import Tilt from "react-tilt";
 import { Container, Wrapper } from "../Container";
 // images
 import seoImg from "../../images/seo.png";
@@ -10,7 +11,9 @@ export default function SeoSecond() {
     <Container>
       <Wrapper>
         <InnerWrapper>
-          <img src={seoImg} alt={seoImg} />
+          <TiltWrapper options={{ max: 25 }}>
+            <img src={seoImg} alt={seoImg} />
+          </TiltWrapper>
           <Right>
             <h3>Let's Grow Your Business</h3>
             <p>We're The Monkeys To Do It. </p>
@@ -73,5 +76,13 @@ const Right = styled.div`
 
   p {
     text-align: left;
+  }
+`;
+
+const TiltWrapper = styled(Tilt)`
+  width: 60%;
+
+  @media (max-width: 670px) {
+    display: none;
   }
 `;
