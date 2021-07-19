@@ -92,6 +92,10 @@ const Container = styled.div`
     color: #fff;
     text-decoration: none;
     margin-right: 10;
+
+    &:hover {
+      color: var(--navColor);
+    }
   }
 `;
 
@@ -133,6 +137,7 @@ const Info = styled.div`
     transition: 0.2s;
 
     &:hover {
+      color: #fff;
       background: var(--navColor);
     }
   }

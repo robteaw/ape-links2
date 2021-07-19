@@ -10,7 +10,8 @@
 
 :root {
   --linkColor: #fff;
-  --navColor: #003300;
+  --dropColor: #003300;
+  --navColor: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   --navHover: #00e676;
   --btnColor: #228b22;
   --btnColor2: #ffd700;
@@ -88,16 +89,22 @@ button:hover {
 }
 
 .slick-prev {
-  background: var(--navColor);
+  background: var(--headColor3);
+  height: 2rem;
+  width: 2rem;
   border-radius: 2rem;
-  left: 2% !important;
+  left: 2%;
   z-index: 1;
+  opacity: 80%;
 }
 .slick-next {
-  background: var(--navColor);
+  background: var(--headColor3);
+  height: 2rem;
+  width: 2rem;
   border-radius: 2rem;
-  right: 2% !important;
+  right: 2%;
   z-index: 1;
+  opacity: 80%;
 }
 
 .slick-prev:hover,
@@ -105,9 +112,14 @@ button:hover {
   background: var(--navHover);
 }
 
+.slick-prev:focus,
+.slick-next:focus {
+  background: var(--navHover);
+}
+
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   h2 {

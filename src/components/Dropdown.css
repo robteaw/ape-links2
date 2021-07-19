@@ -1,13 +1,13 @@
 .dropdown-menu {
   width: 200px;
   position: absolute;
-  top: 50px;
+  top: 70px;
   list-style: none;
   text-align: start;
 }
 
 .dropdown-menu li {
-  background: var(--teamColor);
+  background: var(--dropColor);
   cursor: pointer;
 }
 
@@ -24,8 +24,16 @@
   padding: 16px;
 }
 
+a:hover {
+  color: var(--navHover);
+}
+
 @media screen and (max-width: 960px) {
-  .fa-caret-down {
-    display: none;
+  .dropdown-menu {
+    width: 100%;
+    position: absolute;
+    top: 170px;
+    list-style: none;
+    text-align: center;
   }
 }

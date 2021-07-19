@@ -8,9 +8,15 @@ export default function CareerSection() {
       <Wrapper>
         <InnerWrapper>
           <h1>Careers</h1>
-          <h5>Posititions Available</h5>
-          <p>Web developer</p>
-          <p>SEO specialist</p>
+          <h5>Positions Available</h5>
+          <span>
+            <p>Web developer</p>
+            <p>SEO specialist</p>
+          </span>
+          <p>
+            To apply, send email with a resume to
+            <a href="mailto:seoapelinks@gmail.com"> seoapelinks@gmail.com</a>
+          </p>
         </InnerWrapper>
       </Wrapper>
     </Container>
@@ -31,11 +37,23 @@ const Container = styled.div`
     text-align: left;
   }
 
-  p {
+  h5 {
+    color: var(--teamColor);
+  }
+
+  span p {
     text-align: left;
     line-height: 2rem;
-    margin-top: 2rem;
-    margin-left: 2rem;
+    margin: 2rem 0 2rem 2rem;
+  }
+
+  a {
+    color: var(--teamColor);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--navColor);
+    }
   }
 
   @media (max-width: 1100px) {

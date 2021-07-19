@@ -3,15 +3,13 @@ import { Link } from "react-router-dom";
 import { MenuItems } from "./MenuItems";
 import "./Dropdown.css";
 
-export default function Dropdown() {
+export default function Dropdown(props) {
   const [click, setClick] = useState(false);
-
-  const handleClick = () => setClick(!click);
 
   return (
     <>
       <ul
-        onClick={handleClick}
+        onClick={props.onCloseMobileMenu}
         className={click ? "dropdown-menu clicked" : "dropdown-menu"}
       >
         {MenuItems.map((item, index) => {
