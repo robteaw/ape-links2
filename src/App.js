@@ -14,11 +14,13 @@ import AboutSeo from "./pages/AboutSeo";
 import Career from "./pages/Career";
 import Footer from "./components/Footer";
 import Reserve from "./components/Reserve";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />

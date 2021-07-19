@@ -94,7 +94,7 @@ const Container = styled.div`
     margin-right: 10;
 
     &:hover {
-      color: var(--navColor);
+      color: var(--dropColor);
     }
   }
 `;
@@ -151,7 +151,7 @@ const Newsletter = styled.div`
 
   .submit {
     color: var(--linkColor);
-    background-color: var(--navColor);
+    background-color: var(--dropColor);
     font-size: 0.9rem;
     font-weight: bold;
     text-transform: uppercase;
