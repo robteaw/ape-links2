@@ -8,19 +8,17 @@ import { FaLaptopCode } from "react-icons/fa";
 
 export default function TopSection() {
   return (
-    <>
-      <Top id="more">
-        <h5>
-          <RiEmotionHappyLine /> 100+ Happy Clients
-        </h5>
-        <h5>
-          <GiReceiveMoney /> Affordable Prices
-        </h5>
-        <h5>
-          <FaLaptopCode /> SEO Experts
-        </h5>
-      </Top>
-    </>
+    <Top id="more">
+      <h5>
+        <RiEmotionHappyLine /> 100+ Happy Clients
+      </h5>
+      <h5>
+        <GiReceiveMoney /> Affordable Prices
+      </h5>
+      <h5>
+        <FaLaptopCode /> SEO Experts
+      </h5>
+    </Top>
   );
 }
 

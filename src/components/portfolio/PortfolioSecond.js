@@ -41,7 +41,8 @@ export default function PortfolioSecond() {
 const Container = styled.div`
   height: auto;
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
 `;
@@ -58,11 +59,9 @@ const InnerWrapper = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-
   h2 {
     margin: 8rem 0 2rem 0;
   }
-
   img {
     width: 100%;
     border: 0.5rem solid #fff;

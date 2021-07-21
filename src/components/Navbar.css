@@ -8,7 +8,7 @@
   font-size: 1.2rem;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 99;
 }
 
 .navbar-logo {
@@ -129,7 +129,7 @@
     padding: 1.5rem;
     margin: 2rem auto;
     border-radius: 4px;
-    width: 80%;
+    width: 100%;
     text-decoration: none;
     color: var(--linkColor);
     font-size: 1.5rem;

@@ -24,7 +24,6 @@ export default function ContactSection() {
                     <p>
                       <HiOutlineMail />
                       <a href="mailto:seoapelinks@gmail.com">
-                        {" "}
                         seoapelinks@gmail.com
                       </a>
                     </p>
@@ -46,12 +45,32 @@ export default function ContactSection() {
               ></iframe>
             </Left>
             <Form>
-              <form action="">
-                <input className="field" type="text" placeholder="Full Name" />
-                <input className="field" type="email" placeholder="Email" />
+              <form
+                name="contact"
+                action="/contact"
+                method="POST"
+                onSubmit="submit"
+              >
+                <input type="hidden" name="form-name" value="contact" />
                 <input
+                  required
                   className="field"
+                  name="name"
                   type="text"
+                  placeholder="Full Name"
+                />
+                <input
+                  required
+                  className="field"
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                />
+                <input
+                  required
+                  className="field"
+                  name="phone"
+                  type="tel"
                   placeholder="Phone Number"
                 />
 
@@ -67,7 +86,7 @@ export default function ContactSection() {
                 </select>
 
                 <label htmlFor="">How long will this project be?</label>
-                <select name="service" id="service">
+                <select name="length" id="length">
                   <option disabled selected value></option>
                   <option value="freeaduit">Free Audit</option>
                   <option value="3-6weeks">3-6 Weeks</option>
@@ -77,20 +96,20 @@ export default function ContactSection() {
                 </select>
 
                 <label htmlFor="">How would you like us to work?</label>
-                <select name="service" id="service">
+                <select name="work" id="work">
                   <option disabled selected value></option>
                   <option value="remote">Remote</option>
                   <option value="onlocation">On Location</option>
                 </select>
 
                 <label htmlFor="">Would you like a free web crawl?</label>
-                <select name="service" id="service">
+                <select name="crawl" id="crawl">
                   <option disabled selected value></option>
                   <option value="accept">Accept</option>
                   <option value="decline">Decline</option>
                 </select>
 
-                <button>Submit</button>
+                <button type="submit">Submit</button>
               </form>
             </Form>
           </Bottom>

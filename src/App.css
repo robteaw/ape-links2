@@ -89,20 +89,20 @@ button:hover {
 }
 
 .slick-prev {
-  background: var(--headColor3);
+  background: #ccc;
   height: 2rem;
   width: 2rem;
   border-radius: 2rem;
-  left: 2%;
+  left: 1%;
   z-index: 1;
   opacity: 80%;
 }
 .slick-next {
-  background: var(--headColor3);
+  background: #ccc;
   height: 2rem;
   width: 2rem;
   border-radius: 2rem;
-  right: 2%;
+  right: 1%;
   z-index: 1;
   opacity: 80%;
 }
