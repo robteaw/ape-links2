@@ -109,7 +109,9 @@ export default function ContactSection() {
                   <option value="decline">Decline</option>
                 </select>
 
-                <button type="submit">Submit</button>
+                <button onClick="" type="submit">
+                  Submit
+                </button>
               </form>
             </Form>
           </Bottom>
