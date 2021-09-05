@@ -24,6 +24,7 @@ export default function ContactSection() {
                     <p>
                       <HiOutlineMail />
                       <a href="mailto:seoapelinks@gmail.com">
+                        {" "}
                         seoapelinks@gmail.com
                       </a>
                     </p>
