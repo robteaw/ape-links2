@@ -2,22 +2,26 @@ import React from "react";
 import { Link } from "react-router-dom";
 // styling and animations
 import styled from "styled-components";
+import { motion } from "framer-motion/dist/framer-motion";
+import { titleAnim } from "../../animations";
 
 export default function HeroText() {
   return (
     <Container>
-      <h1>Most Ferious </h1>
-      <h1>SEO & Marketing Service</h1>
-      <p>
+      <motion.h1 variants={titleAnim}>Most Ferious </motion.h1>
+      <motion.h1 variants={titleAnim}>SEO & Marketing Service</motion.h1>
+      <motion.p variants={titleAnim}>
         We have been ranking websites for over eight years now, and our SEO/PPC
         animals are the best in class and are your competitor's dread.
-      </p>
+      </motion.p>
       <BtnContainer>
         <a href="/#more">
-          <button className="learnmore">Learn More</button>
+          <motion.button variants={titleAnim} className="learnmore">
+            Learn More
+          </motion.button>
         </a>
         <Link to="/contact">
-          <button>Request Demo</button>
+          <motion.button variants={titleAnim}>Request Demo</motion.button>
         </Link>
       </BtnContainer>
     </Container>

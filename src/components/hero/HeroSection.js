@@ -1,6 +1,8 @@
 import React from "react";
 // styling and animations
 import styled from "styled-components";
+import { motion } from "framer-motion/dist/framer-motion";
+import { container, imgAnim } from "../../animations";
 import Tilt from "react-tilt";
 import HeroText from "./HeroText";
 // images
@@ -10,6 +12,8 @@ import heroImg from "../../images/hero.png";
 export default function HeroSection() {
   return (
     <Container
+      as={motion.div}
+      variants={container}
       style={{
         backgroundImage: `url(${heroBg})`,
         backgroundPosition: "center top",
@@ -24,7 +28,7 @@ export default function HeroSection() {
             <HeroText />
           </Left>
           <TiltWrapper options={{ max: 25 }}>
-            <img src={heroImg} alt={heroImg} />
+            <motion.img variants={imgAnim} src={heroImg} alt={heroImg} />
           </TiltWrapper>
         </InnerWrapper>
       </Wrapper>
