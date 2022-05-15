@@ -15,10 +15,12 @@ import Career from "./pages/Career";
 import Footer from "./components/Footer";
 import Reserve from "./components/Reserve";
 import ScrollToTop from "./components/ScrollToTop";
+// Animation
+import { motion } from "framer-motion/dist/framer-motion";
 
 function App() {
   return (
-    <>
+    <motion.div initial="hidden" animate="show">
       <Router>
         <ScrollToTop />
         <Navbar />
@@ -37,7 +39,7 @@ function App() {
         <Footer />
         <Reserve />
       </Router>
-    </>
+    </motion.div>
   );
 }
 
