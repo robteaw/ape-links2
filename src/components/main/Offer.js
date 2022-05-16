@@ -2,6 +2,9 @@ import React from "react";
 // styling and animation
 import styled from "styled-components";
 import { Container, Wrapper } from "../Container";
+import { motion } from "framer-motion/dist/framer-motion";
+import { textAnim, cardAnim } from "../../animations";
+import { useScroll } from "../useScroll";
 // images
 import earned from "../../images/earned.jpg";
 import paid from "../../images/paid.jpg";
@@ -11,12 +14,29 @@ import camera from "../../images/camera.jpg";
 import service from "../../images/service.jpg";
 
 export default function Offer() {
+  const [element, controls] = useScroll();
+
   return (
     <Container>
       <Wrapper>
-        <h1>What We Offer</h1>
+        <motion.h1
+          initial="hidden"
+          variants={textAnim}
+          animate={controls}
+          ref={element}
+        >
+          What We Offer
+        </motion.h1>
         <InnerWrapper>
-          <Card>
+          <Card
+            as={motion.div}
+            initial="hidden"
+            variants={cardAnim}
+            animate={controls}
+            transition={{
+              duration: 1,
+            }}
+          >
             <img src={earned} alt={earned} />
             <h5>Earned Media</h5>
             <p>
@@ -25,7 +45,12 @@ export default function Offer() {
             </p>
           </Card>
 
-          <Card>
+          <Card
+            as={motion.div}
+            initial="hidden"
+            variants={cardAnim}
+            animate={controls}
+          >
             <img src={paid} alt={paid} />
             <h5>Paid Media</h5>
             <p>
@@ -34,7 +59,12 @@ export default function Offer() {
             </p>
           </Card>
 
-          <Card>
+          <Card
+            as={motion.div}
+            initial="hidden"
+            variants={cardAnim}
+            animate={controls}
+          >
             <img src={email} alt={email} />
             <h5>Email Marketing</h5>
             <p>
@@ -43,7 +73,12 @@ export default function Offer() {
             </p>
           </Card>
 
-          <Card>
+          <Card
+            as={motion.div}
+            initial="hidden"
+            variants={cardAnim}
+            animate={controls}
+          >
             <img src={video} alt={video} />
             <h5>Video Production</h5>
             <p>
@@ -52,13 +87,23 @@ export default function Offer() {
             </p>
           </Card>
 
-          <Card>
+          <Card
+            as={motion.div}
+            initial="hidden"
+            variants={cardAnim}
+            animate={controls}
+          >
             <img src={camera} alt={camera} />
             <h5>Photography</h5>
             <p>Photoshoots, Product pictures, photo editing & more.</p>
           </Card>
 
-          <Card>
+          <Card
+            as={motion.div}
+            initial="hidden"
+            variants={cardAnim}
+            animate={controls}
+          >
             <img src={service} alt={service} />
             <h5>More Services</h5>
             <p>

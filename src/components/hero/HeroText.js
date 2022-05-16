@@ -14,14 +14,12 @@ export default function HeroText() {
         We have been ranking websites for over eight years now, and our SEO/PPC
         animals are the best in class and are your competitor's dread.
       </motion.p>
-      <BtnContainer>
+      <BtnContainer as={motion.div} variants={titleAnim}>
         <a href="/#more">
-          <motion.button variants={titleAnim} className="learnmore">
-            Learn More
-          </motion.button>
+          <button className="learnmore">Learn More</button>
         </a>
         <Link to="/contact">
-          <motion.button variants={titleAnim}>Request Demo</motion.button>
+          <button>Request Demo</button>
         </Link>
       </BtnContainer>
     </Container>

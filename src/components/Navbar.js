@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
-// images
-import logo from "../images/logo.png";
 // styling and animation
 import styled from "styled-components";
 import { motion } from "framer-motion/dist/framer-motion";
 import { linkAnim, logoAnim } from "../animations";
+// images
+import logo from "../images/logo.png";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);

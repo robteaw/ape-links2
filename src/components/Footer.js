@@ -2,14 +2,26 @@ import React from "react";
 import { Link } from "react-router-dom";
 // styling and animation
 import styled from "styled-components";
+import { motion } from "framer-motion/dist/framer-motion";
+import { textAnim } from "../animations";
+import { useScroll } from "./useScroll";
+// images
 import { MdLocationOn } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiPhoneCall } from "react-icons/bi";
 
 export default function Footer() {
+  const [element, controls] = useScroll();
+
   return (
     <Container>
-      <Wrapper>
+      <Wrapper
+        as={motion.div}
+        initial="hidden"
+        variants={textAnim}
+        animate={controls}
+        ref={element}
+      >
         <Resource>
           <p>
             <h5>Hours</h5>

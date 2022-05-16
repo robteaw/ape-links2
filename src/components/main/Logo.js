@@ -1,6 +1,9 @@
 import React from "react";
 // styling and animations
 import styled from "styled-components";
+import { motion } from "framer-motion/dist/framer-motion";
+import { textAnim } from "../../animations";
+import { useScroll } from "../useScroll";
 // images
 import googleads from "../../images/googleads.png";
 import googleanalytics from "../../images/googleanalytics.png";
@@ -11,8 +14,16 @@ import raven from "../../images/raven.png";
 import semrush from "../../images/semrush.png";
 
 export default function Logo() {
+  const [element, controls] = useScroll();
+
   return (
-    <Icon>
+    <Icon
+      as={motion.div}
+      initial="hidden"
+      variants={textAnim}
+      animate={controls}
+      ref={element}
+    >
       <div className="slider">
         <div className="slide">
           <img src={googleads} alt={googleads} />

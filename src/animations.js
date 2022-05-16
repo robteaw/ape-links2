@@ -17,7 +17,7 @@ export const titleAnim = {
 
 export const imgAnim = {
   hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 1 } },
+  show: { opacity: 1, transition: { duration: 0.5 } },
 };
 
 export const container = {
@@ -30,4 +30,15 @@ export const container = {
       when: "before",
     },
   },
+};
+
+// Main
+export const textAnim = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.5 } },
+};
+
+export const cardAnim = {
+  hidden: { y: -200, opacity: 0 },
+  show: { y: 0, opacity: 1, transition: { duration: 1 } },
 };
