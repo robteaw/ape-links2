@@ -1,22 +1,26 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import { motion } from "framer-motion/dist/framer-motion";
+import { container, textAnim } from "../../animations";
 
 export default function CareerSection() {
   return (
-    <Container>
+    <Container as={motion.div} variants={container}>
       <Wrapper>
         <InnerWrapper>
-          <h1>Careers</h1>
-          <h5>Positions Available</h5>
-          <span>
-            <p>Web developer</p>
-            <p>SEO specialist</p>
-          </span>
-          <p>
-            To apply, send email with a resume to
-            <a href="mailto:seoapelinks@gmail.com"> seoapelinks@gmail.com</a>
-          </p>
+          <motion.h1 variants={textAnim}>Careers</motion.h1>
+          <motion.div variants={textAnim}>
+            <h5>Positions Available</h5>
+            <span>
+              <p>Web developer</p>
+              <p>SEO specialist</p>
+            </span>
+            <p>
+              To apply, send email with a resume to
+              <a href="mailto:seoapelinks@gmail.com"> seoapelinks@gmail.com</a>
+            </p>
+          </motion.div>
         </InnerWrapper>
       </Wrapper>
     </Container>

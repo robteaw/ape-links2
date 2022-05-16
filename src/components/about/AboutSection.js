@@ -2,15 +2,17 @@ import React from "react";
 // styling and animation
 import styled from "styled-components";
 import { Container, Wrapper } from "../Container";
+import { motion } from "framer-motion/dist/framer-motion";
+import { container, textAnim } from "../../animations";
 
 export default function AboutSection() {
   return (
-    <Container>
+    <Container as={motion.div} variants={container}>
       <Wrapper>
-        <h1>
+        <motion.h1 variants={textAnim}>
           Trustworthy, Great Service <br />& Outstanding Results
-        </h1>
-        <Bottom>
+        </motion.h1>
+        <Bottom as={motion.div} variants={textAnim}>
           <p>
             Launched in 2017 by co-founders Jonathan Yeras and Andrew Olguin,
             Apelinks is a premier full-service digital marketing agency based in

@@ -3,6 +3,9 @@ import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 import { settings } from "../Container";
+import { motion } from "framer-motion/dist/framer-motion";
+import { textAnim, cardAnim } from "../../animations";
+import { useScroll } from "../useScroll";
 // images - set 1
 import p1a from "../../images/portfolio/p1a.png";
 import p1b from "../../images/portfolio/p1b.png";
@@ -13,21 +16,39 @@ import p1e from "../../images/portfolio/p1e.png";
 const images = [p1a, p1b, p1c, p1d, p1e];
 
 export default function PortfolioTop() {
+  const [element, controls] = useScroll();
   <settings />;
 
   return (
     <Container>
       <Wrapper>
         <InnerWrapper>
-          <h2>Copywriting and Photoshop design for online advertisements.</h2>
+          <motion.h2
+            initial="hidden"
+            variants={textAnim}
+            animate={controls}
+            ref={element}
+          >
+            Copywriting and Photoshop design for online advertisements.
+          </motion.h2>
 
-          <Slider {...settings}>
-            {images.map((img, idx) => (
-              <div>
-                <img src={img} alt={img} />
-              </div>
-            ))}
-          </Slider>
+          <motion.div
+            initial="hidden"
+            variants={cardAnim}
+            animate={controls}
+            transition={{
+              duration: 1,
+            }}
+            ref={element}
+          >
+            <Slider {...settings}>
+              {images.map((img, idx) => (
+                <div>
+                  <img src={img} alt={img} />
+                </div>
+              ))}
+            </Slider>
+          </motion.div>
         </InnerWrapper>
       </Wrapper>
     </Container>

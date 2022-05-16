@@ -3,6 +3,9 @@ import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 import { settings } from "../Container";
+import { motion } from "framer-motion/dist/framer-motion";
+import { textAnim, cardAnim } from "../../animations";
+import { useScroll } from "../useScroll";
 // images - set 4
 import p4a from "../../images/portfolio/p4a.png";
 import p4b from "../../images/portfolio/p4b.png";
@@ -14,21 +17,39 @@ import p4f from "../../images/portfolio/p4f.png";
 const images = [p4a, p4b, p4c, p4d, p4e, p4f];
 
 export default function PortfolioBottom() {
+  const [element, controls] = useScroll();
   <settings />;
 
   return (
     <Container>
       <Wrapper>
         <InnerWrapper>
-          <h2>Vector Art Branding for Various Types of Industries.</h2>
+          <motion.h2
+            initial="hidden"
+            variants={textAnim}
+            animate={controls}
+            ref={element}
+          >
+            Vector Art Branding for Various Types of Industries.
+          </motion.h2>
 
-          <Slider {...settings}>
-            {images.map((img, idx) => (
-              <div>
-                <img src={img} alt={img} />
-              </div>
-            ))}
-          </Slider>
+          <motion.div
+            initial="hidden"
+            variants={cardAnim}
+            animate={controls}
+            transition={{
+              duration: 1,
+            }}
+            ref={element}
+          >
+            <Slider {...settings}>
+              {images.map((img, idx) => (
+                <div>
+                  <img src={img} alt={img} />
+                </div>
+              ))}
+            </Slider>
+          </motion.div>
         </InnerWrapper>
       </Wrapper>
     </Container>

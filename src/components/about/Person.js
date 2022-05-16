@@ -1,14 +1,28 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import { motion } from "framer-motion/dist/framer-motion";
+import { cardAnim } from "../../animations";
+import { useScroll } from "../useScroll";
 // images
 import yeras from "../../images/yeras.png";
 import olguin from "../../images/olguin.png";
 
 export default function Person() {
+  const [element, controls] = useScroll();
+
   return (
     <Container>
-      <Card>
+      <Card
+        as={motion.div}
+        initial="hidden"
+        variants={cardAnim}
+        animate={controls}
+        transition={{
+          duration: 1,
+        }}
+        ref={element}
+      >
         <Name>
           <img src={yeras} alt={yeras} />
           <h5>Jonathan Yeras</h5>
@@ -23,7 +37,16 @@ export default function Person() {
         </Skill>
       </Card>
       <hr />
-      <Card>
+      <Card
+        as={motion.div}
+        initial="hidden"
+        variants={cardAnim}
+        animate={controls}
+        transition={{
+          duration: 1,
+        }}
+        ref={element}
+      >
         <Name>
           <img src={olguin} alt={olguin} />
           <h5>Andrew Olguin</h5>

@@ -3,6 +3,9 @@ import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 import { settings } from "../Container";
+import { motion } from "framer-motion/dist/framer-motion";
+import { textAnim, cardAnim } from "../../animations";
+import { useScroll } from "../useScroll";
 // images - set 3
 import p3a from "../../images/portfolio/p3a.png";
 import p3b from "../../images/portfolio/p3b.png";
@@ -14,21 +17,39 @@ import p3f from "../../images/portfolio/p3f.png";
 const images = [p3a, p3b, p3c, p3d, p3e, p3f];
 
 export default function PortfolioSecond() {
+  const [element, controls] = useScroll();
   <settings />;
 
   return (
     <Container>
       <Wrapper>
         <InnerWrapper>
-          <h2>3D Graphic Design and Animation For Proof of Concept Art.</h2>
+          <motion.h2
+            initial="hidden"
+            variants={textAnim}
+            animate={controls}
+            ref={element}
+          >
+            3D Graphic Design and Animation For Proof of Concept Art.
+          </motion.h2>
 
-          <Slider {...settings}>
-            {images.map((img, idx) => (
-              <div>
-                <img src={img} alt={img} />
-              </div>
-            ))}
-          </Slider>
+          <motion.div
+            initial="hidden"
+            variants={cardAnim}
+            animate={controls}
+            transition={{
+              duration: 1,
+            }}
+            ref={element}
+          >
+            <Slider {...settings}>
+              {images.map((img, idx) => (
+                <div>
+                  <img src={img} alt={img} />
+                </div>
+              ))}
+            </Slider>
+          </motion.div>
         </InnerWrapper>
       </Wrapper>
     </Container>
