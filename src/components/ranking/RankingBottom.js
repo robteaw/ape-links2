@@ -2,6 +2,8 @@ import React from "react";
 // styling and animation
 import styled from "styled-components";
 import { Container, Wrapper } from "../Container";
+import { motion } from "framer-motion/dist/framer-motion";
+import { imgAnim, textAnim } from "../../animations";
 // images
 import adwords from "../../images/adwords.png";
 
@@ -10,7 +12,7 @@ export default function RankingBottom() {
     <Container>
       <Wrapper>
         <InnerWrapper>
-          <Left>
+          <Left as={motion.div} variants={textAnim}>
             <h3>Get Professional Metrics</h3>
             <p>
               Handed out during meeting, with the latest insight on your
@@ -19,7 +21,7 @@ export default function RankingBottom() {
             <h3>Cohesive and Responsive</h3>
             <p>Road maps made tailored to your specific websites goals.</p>
           </Left>
-          <img src={adwords} alt={adwords} />
+          <motion.img variants={imgAnim} src={adwords} alt={adwords} />
         </InnerWrapper>
       </Wrapper>
     </Container>

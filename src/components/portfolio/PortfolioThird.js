@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import { settings } from "../Container";
 import { motion } from "framer-motion/dist/framer-motion";
-import { textAnim, cardAnim } from "../../animations";
+import { textAnim, imgAnim } from "../../animations";
 import { useScroll } from "../useScroll";
 // images - set 3
 import p3a from "../../images/portfolio/p3a.png";
@@ -35,7 +35,7 @@ export default function PortfolioSecond() {
 
           <motion.div
             initial="hidden"
-            variants={cardAnim}
+            variants={imgAnim}
             animate={controls}
             transition={{
               duration: 1,

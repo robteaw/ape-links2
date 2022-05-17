@@ -3,20 +3,24 @@ import React from "react";
 import styled from "styled-components";
 import Tilt from "react-tilt";
 import { Container, Wrapper } from "../Container";
+import { motion } from "framer-motion/dist/framer-motion";
 // images
 import ranking from "../../images/ranking.png";
+import { imgAnim, textAnim } from "../../animations";
 
 export default function RankingSecond() {
   return (
     <Container>
       <Wrapper>
-        <h3>Google Ranks Websites Based On Search Queries</h3>
+        <motion.h3 variants={textAnim}>
+          Google Ranks Websites Based On Search Queries
+        </motion.h3>
         <InnerWrapper>
           <TiltWrapper options={{ max: 25 }}>
-            <img src={ranking} alt={ranking} />
+            <motion.img variants={imgAnim} src={ranking} alt={ranking} />
           </TiltWrapper>
 
-          <Right>
+          <Right as={motion.div} variants={textAnim}>
             <p>Google ranks based of a user grade sheet of 200 factors.</p>
             <p>
               Google manually reviews blog post all across the internet and

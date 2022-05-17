@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 // styling and animations
 import styled from "styled-components";
 import { motion } from "framer-motion/dist/framer-motion";
-import { titleAnim } from "../../animations";
+import { textAnim } from "../../animations";
 
 export default function HeroText() {
   return (
     <Container>
-      <motion.h1 variants={titleAnim}>Most Ferious </motion.h1>
-      <motion.h1 variants={titleAnim}>SEO & Marketing Service</motion.h1>
-      <motion.p variants={titleAnim}>
+      <motion.h1 variants={textAnim}>Most Ferious </motion.h1>
+      <motion.h1 variants={textAnim}>SEO & Marketing Service</motion.h1>
+      <motion.p variants={textAnim}>
         We have been ranking websites for over eight years now, and our SEO/PPC
         animals are the best in class and are your competitor's dread.
       </motion.p>
-      <BtnContainer as={motion.div} variants={titleAnim}>
+      <BtnContainer as={motion.div} variants={textAnim}>
         <a href="/#more">
           <button className="learnmore">Learn More</button>
         </a>

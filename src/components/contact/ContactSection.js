@@ -4,10 +4,12 @@ import styled from "styled-components";
 import { Container, Wrapper } from "../Container";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiPhoneCall } from "react-icons/bi";
+import { motion } from "framer-motion/dist/framer-motion";
+import { textAnim } from "../../animations";
 
 export default function ContactSection() {
   return (
-    <Container>
+    <Container as={motion.div} variants={textAnim}>
       <Wrapper>
         <InnerWrapper>
           <h1>Contact</h1>
@@ -24,7 +26,6 @@ export default function ContactSection() {
                     <p>
                       <HiOutlineMail />
                       <a href="mailto:seoapelinks@gmail.com">
-                        {" "}
                         seoapelinks@gmail.com
                       </a>
                     </p>

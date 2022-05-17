@@ -2,7 +2,7 @@ import React from "react";
 // styling and animation
 import styled from "styled-components";
 import { motion } from "framer-motion/dist/framer-motion";
-import { cardAnim } from "../../animations";
+import { imgAnim } from "../../animations";
 import { useScroll } from "../useScroll";
 // images
 import yeras from "../../images/yeras.png";
@@ -16,7 +16,7 @@ export default function Person() {
       <Card
         as={motion.div}
         initial="hidden"
-        variants={cardAnim}
+        variants={imgAnim}
         animate={controls}
         transition={{
           duration: 1,
@@ -40,7 +40,7 @@ export default function Person() {
       <Card
         as={motion.div}
         initial="hidden"
-        variants={cardAnim}
+        variants={imgAnim}
         animate={controls}
         transition={{
           duration: 1,

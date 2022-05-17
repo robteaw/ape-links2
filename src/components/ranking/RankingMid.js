@@ -2,6 +2,8 @@ import React from "react";
 // styling and animation
 import styled from "styled-components";
 import { Container, Wrapper } from "../Container";
+import { motion } from "framer-motion/dist/framer-motion";
+
 // images
 import analytics from "../../images/g-analytics.png";
 import console from "../../images/console.png";
@@ -10,7 +12,9 @@ export default function RankingThird() {
   return (
     <Container>
       <Wrapper>
-        <h3>Learn How To Integrate These Tools For Your Business</h3>
+        <motion.h3>
+          Learn How To Integrate These Tools For Your Business
+        </motion.h3>
 
         <InnerWrapper>
           <img src={analytics} alt={analytics} />

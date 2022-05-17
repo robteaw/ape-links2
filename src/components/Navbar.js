@@ -62,7 +62,7 @@ export default function Navbar() {
             onMouseLeave={onMouseLeave}
             onClick={extendElement}
           >
-            <Link to="/" className="nav-links">
+            <Link to="" className="nav-links">
               Services <i className="fas fa-caret-down" />
             </Link>
             {dropdown && <Dropdown onCloseMobileMenu={closeMobileMenu} />}

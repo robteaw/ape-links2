@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Wrapper } from "../Container";
 import { motion } from "framer-motion/dist/framer-motion";
-import { textAnim, cardAnim } from "../../animations";
+import { textAnim, imgAnim } from "../../animations";
 import { useScroll } from "../useScroll";
 // images
 import earned from "../../images/earned.jpg";
@@ -31,7 +31,7 @@ export default function Offer() {
           <Card
             as={motion.div}
             initial="hidden"
-            variants={cardAnim}
+            variants={imgAnim}
             animate={controls}
             transition={{
               duration: 1,
@@ -48,7 +48,7 @@ export default function Offer() {
           <Card
             as={motion.div}
             initial="hidden"
-            variants={cardAnim}
+            variants={imgAnim}
             animate={controls}
           >
             <img src={paid} alt={paid} />
@@ -62,7 +62,7 @@ export default function Offer() {
           <Card
             as={motion.div}
             initial="hidden"
-            variants={cardAnim}
+            variants={imgAnim}
             animate={controls}
           >
             <img src={email} alt={email} />
@@ -76,7 +76,7 @@ export default function Offer() {
           <Card
             as={motion.div}
             initial="hidden"
-            variants={cardAnim}
+            variants={imgAnim}
             animate={controls}
           >
             <img src={video} alt={video} />
@@ -90,7 +90,7 @@ export default function Offer() {
           <Card
             as={motion.div}
             initial="hidden"
-            variants={cardAnim}
+            variants={imgAnim}
             animate={controls}
           >
             <img src={camera} alt={camera} />
@@ -101,7 +101,7 @@ export default function Offer() {
           <Card
             as={motion.div}
             initial="hidden"
-            variants={cardAnim}
+            variants={imgAnim}
             animate={controls}
           >
             <img src={service} alt={service} />

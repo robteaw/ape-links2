@@ -9,36 +9,25 @@ export const logoAnim = {
   show: { opacity: 1, transition: { duration: 1 } },
 };
 
-// Hero
-export const titleAnim = {
+// Main
+export const textAnim = {
   hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 0.5 } },
+  show: { opacity: 1, transition: { duration: 0.25 } },
 };
 
 export const imgAnim = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 0.5 } },
+  hidden: { y: -80, opacity: 0 },
+  show: { y: 0, opacity: 1, transition: { duration: 1 } },
 };
 
 export const container = {
   show: {
     x: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.1,
       ease: "easeOut",
       staggerChildren: 1,
       when: "before",
     },
   },
-};
-
-// Main
-export const textAnim = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 0.5 } },
-};
-
-export const cardAnim = {
-  hidden: { y: -200, opacity: 0 },
-  show: { y: 0, opacity: 1, transition: { duration: 1 } },
 };
