@@ -3,16 +3,27 @@ import React from "react";
 import styled from "styled-components";
 import Tilt from "react-tilt";
 import { Container, Wrapper } from "../Container";
+import { motion } from "framer-motion/dist/framer-motion";
+import { imgAnim, textAnim } from "../../animations";
+import { useScroll } from "../useScroll";
 // images
 import ppcImg from "../../images/ppc.png";
 
 export default function PpcBottom() {
+  const [element, controls] = useScroll();
+
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      initial="hidden"
+      variants={textAnim}
+      animate={controls}
+      ref={element}
+    >
       <Wrapper>
         <InnerWrapper>
           <TiltWrapper options={{ max: 25 }}>
-            <img src={ppcImg} alt={ppcImg} />
+            <motion.img variants={imgAnim} src={ppcImg} alt={ppcImg} />
           </TiltWrapper>
           <Right>
             <h3>SEO & PPC</h3>

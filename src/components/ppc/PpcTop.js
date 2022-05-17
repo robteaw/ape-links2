@@ -3,18 +3,31 @@ import { Link } from "react-router-dom";
 // styling and animation
 import styled from "styled-components";
 import { Container, Wrapper } from "../Container";
+import { motion } from "framer-motion/dist/framer-motion";
+import { textAnim } from "../../animations";
+import { useScroll } from "../useScroll";
 
 export default function PpcTop() {
+  const [element, controls] = useScroll();
+
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      initial="hidden"
+      variants={textAnim}
+      animate={controls}
+      ref={element}
+    >
       <Wrapper>
         <InnerWrapper>
           <h2>
             Best in Class Search Management <br />& A Google Certified Agency
           </h2>
-          <p>For new campaign setups, email or call now to discuss further.</p>
+          <motion.p variants={textAnim}>
+            For new campaign setups, email or call now to discuss further.
+          </motion.p>
           <Link to="/contact">
-            <button>Free PPC Review</button>
+            <motion.button variants={textAnim}>Free PPC Review</motion.button>
           </Link>
         </InnerWrapper>
       </Wrapper>

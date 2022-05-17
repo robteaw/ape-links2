@@ -3,16 +3,27 @@ import React from "react";
 import styled from "styled-components";
 import Tilt from "react-tilt";
 import { Container, Wrapper } from "../Container";
+import { motion } from "framer-motion/dist/framer-motion";
+import { imgAnim, textAnim } from "../../animations";
+import { useScroll } from "../useScroll";
 // images
 import analysis from "../../images/analysis.png";
 
 export default function AuditThird() {
+  const [element, controls] = useScroll();
+
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      initial="hidden"
+      variants={textAnim}
+      animate={controls}
+      ref={element}
+    >
       <Wrapper>
         <InnerWrapper>
           <TiltWrapper options={{ max: 25 }}>
-            <img src={analysis} alt={analysis} />
+            <motion.img variants={imgAnim} src={analysis} alt={analysis} />
           </TiltWrapper>
           <Right>
             <p>

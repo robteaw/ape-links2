@@ -3,10 +3,21 @@ import React from "react";
 import styled from "styled-components";
 import Cards from "./Cards";
 import { Container, Wrapper } from "../Container";
+import { motion } from "framer-motion/dist/framer-motion";
+import { textAnim } from "../../animations";
+import { useScroll } from "../useScroll";
 
 export default function SeoThird() {
+  const [element, controls] = useScroll();
+
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      initial="hidden"
+      variants={textAnim}
+      animate={controls}
+      ref={element}
+    >
       <Wrapper>
         <InnerWrapper>
           <Top>

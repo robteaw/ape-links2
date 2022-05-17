@@ -1,6 +1,8 @@
 import React from "react";
 // styling and animation
 import styled from "styled-components";
+import { motion } from "framer-motion/dist/framer-motion";
+import { imgAnim } from "../../animations";
 // images
 import mechanic from "../../images/mechanic.png";
 import test from "../../images/test.png";
@@ -8,7 +10,7 @@ import target from "../../images/target.png";
 
 export default function Cards() {
   return (
-    <Container>
+    <Container as={motion.div} variants={imgAnim}>
       <Card>
         <img src={mechanic} alt={mechanic} />
         <h3>Phrase 1</h3>

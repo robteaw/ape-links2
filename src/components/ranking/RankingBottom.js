@@ -4,12 +4,21 @@ import styled from "styled-components";
 import { Container, Wrapper } from "../Container";
 import { motion } from "framer-motion/dist/framer-motion";
 import { imgAnim, textAnim } from "../../animations";
+import { useScroll } from "../useScroll";
 // images
 import adwords from "../../images/adwords.png";
 
 export default function RankingBottom() {
+  const [element, controls] = useScroll();
+
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      initial="hidden"
+      variants={textAnim}
+      animate={controls}
+      ref={element}
+    >
       <Wrapper>
         <InnerWrapper>
           <Left as={motion.div} variants={textAnim}>

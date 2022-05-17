@@ -3,10 +3,21 @@ import { Link } from "react-router-dom";
 // styling and animation
 import styled from "styled-components";
 import { Container, Wrapper } from "../Container";
+import { motion } from "framer-motion/dist/framer-motion";
+import { textAnim } from "../../animations";
+import { useScroll } from "../useScroll";
 
 export default function SeoSection() {
+  const [element, controls] = useScroll();
+
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      initial="hidden"
+      variants={textAnim}
+      animate={controls}
+      ref={element}
+    >
       <Wrapper>
         <InnerWrapper>
           <h1>
@@ -14,7 +25,7 @@ export default function SeoSection() {
           </h1>
           <BtnContainer>
             <Link to="/contact">
-              <button>Free Quote</button>
+              <motion.button variants={textAnim}>Free Quote</motion.button>
             </Link>
           </BtnContainer>
         </InnerWrapper>

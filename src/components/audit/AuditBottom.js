@@ -3,12 +3,23 @@ import React from "react";
 import styled from "styled-components";
 import Tilt from "react-tilt";
 import { Container, Wrapper } from "../Container";
+import { motion } from "framer-motion/dist/framer-motion";
+import { imgAnim, textAnim } from "../../animations";
+import { useScroll } from "../useScroll";
 // images
 import unlock from "../../images/unlock.png";
 
 export default function AuditBottom() {
+  const [element, controls] = useScroll();
+
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      initial="hidden"
+      variants={textAnim}
+      animate={controls}
+      ref={element}
+    >
       <Wrapper>
         <InnerWrapper>
           <Left>
@@ -29,7 +40,7 @@ export default function AuditBottom() {
             </p>
           </Left>
           <TiltWrapper options={{ max: 25 }}>
-            <img src={unlock} alt={unlock} />
+            <motion.img variants={imgAnim} src={unlock} alt={unlock} />
           </TiltWrapper>
         </InnerWrapper>
       </Wrapper>

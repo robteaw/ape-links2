@@ -4,13 +4,22 @@ import styled from "styled-components";
 import Tilt from "react-tilt";
 import { Container, Wrapper } from "../Container";
 import { motion } from "framer-motion/dist/framer-motion";
+import { useScroll } from "../useScroll";
 // images
 import ranking from "../../images/ranking.png";
 import { imgAnim, textAnim } from "../../animations";
 
 export default function RankingSecond() {
+  const [element, controls] = useScroll();
+
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      initial="hidden"
+      variants={textAnim}
+      animate={controls}
+      ref={element}
+    >
       <Wrapper>
         <motion.h3 variants={textAnim}>
           Google Ranks Websites Based On Search Queries

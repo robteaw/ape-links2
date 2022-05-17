@@ -12,7 +12,7 @@ export const logoAnim = {
 // Main
 export const textAnim = {
   hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 0.25 } },
+  show: { opacity: 1, transition: { duration: 0.35 } },
 };
 
 export const imgAnim = {

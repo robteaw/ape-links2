@@ -3,16 +3,27 @@ import React from "react";
 import styled from "styled-components";
 import Tilt from "react-tilt";
 import { Container, Wrapper } from "../Container";
+import { motion } from "framer-motion/dist/framer-motion";
+import { imgAnim, textAnim } from "../../animations";
+import { useScroll } from "../useScroll";
 // images
 import seoImg from "../../images/seo.png";
 
 export default function SeoSecond() {
+  const [element, controls] = useScroll();
+
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      initial="hidden"
+      variants={textAnim}
+      animate={controls}
+      ref={element}
+    >
       <Wrapper>
         <InnerWrapper>
           <TiltWrapper options={{ max: 25 }}>
-            <img src={seoImg} alt={seoImg} />
+            <motion.img variants={imgAnim} src={seoImg} alt={seoImg} />
           </TiltWrapper>
           <Right>
             <h3>Let's Grow Your Business</h3>
