@@ -70,7 +70,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   height: 100%;
-  width: 100vw;
+  width: 95vw;
 `;
 
 const InnerWrapper = styled.div`
