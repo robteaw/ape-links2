@@ -5,6 +5,8 @@ import "../../App.css";
 import styled from "styled-components";
 import { IconContext } from "react-icons";
 import { FiPlus, FiMinus } from "react-icons/fi";
+import { motion } from "framer-motion/dist/framer-motion";
+import { imgAnim } from "../../animations";
 
 export default function Accordion() {
   const [clicked, setClicked] = useState(false);
@@ -20,7 +22,7 @@ export default function Accordion() {
 
   return (
     <IconContext.Provider value={{ color: "--btnColor", size: "2rem" }}>
-      <Container>
+      <Container as={motion.div} variants={imgAnim}>
         <Wrapper>
           {Data.map((item, index) => {
             return (
@@ -80,6 +82,5 @@ const Dropdown = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  border-bottom: 2px solid var(--navHover);
+  padding: 2rem 3rem 0 3rem;
 `;

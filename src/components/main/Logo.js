@@ -55,6 +55,7 @@ const Icon = styled.div`
   display: flex; // center logos
   justify-content: center;
   align-items: center;
+  padding: 0.5rem 0;
 
   .slider {
     width: 100%;
