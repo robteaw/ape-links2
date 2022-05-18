@@ -66,7 +66,7 @@ const InnerWrapper = styled.div`
   margin-bottom: 0.25rem;
   cursor: pointer;
   h2 {
-    margin: 1rem;
+    padding-left: 2rem;
   }
   span {
     margin-right: 1.5rem;
